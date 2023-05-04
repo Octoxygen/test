@@ -2,10 +2,10 @@
 @section('title', 'Home - RMBLR')
 @section('content')
 
-<link href="/css/main.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&family=Inter:wght@700&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="/css/main.css" rel="stylesheet">
 
 @extends('navbar')
 

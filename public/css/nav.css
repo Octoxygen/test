@@ -1,0 +1,86 @@
+/* NAVBAR */
+/* Defaults */
+.navx p {
+    color: white;
+    margin: 0;
+}
+
+.username, .postcount, .btn-menudown, .logo {
+    cursor: pointer;
+}
+
+.username, .postcount {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.navx {
+    height: 72px;
+    width: 100%;
+
+    display: flex;
+    background-color: black;
+}
+
+.container-left {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+
+    padding-left: 1em;
+
+    gap: 1em;
+}
+
+.logo {
+    height: fit-content;
+
+    font-weight: 900;
+    font-size: 1.75em;
+    text-align: center;
+}
+
+.container-right {
+    width: 14rem;
+
+    padding-right: 1em;
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.container-user {
+    width: 10px;
+    flex-grow: 1;
+    /* padding: 0 0 0 1em; */
+}
+
+.username {
+    font-size: 0.875rem;
+}
+
+.postcount {
+    font-size: 0.75em;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.btn-menudown {
+    height: 9px;
+    width: 17px;
+}
+
+.button {
+    all: unset;
+    cursor: pointer;
+
+    font-size: 1.125rem;
+    color: var(--cpalette-30);
+}
+
+.active {
+    font-weight: 700;
+    color: var(--cpalette-10);
+}

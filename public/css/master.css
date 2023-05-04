@@ -1,0 +1,12 @@
+:root {
+    --cpalette-60: black;
+    --cpalette-30: white;
+    /* --cpalette-10: #1DED92; */
+    --cpalette-10: #58C69D;
+    --inactive: gray;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
