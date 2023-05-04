@@ -7,6 +7,9 @@
 @section('content')
 
 <link href="/css/main.css" rel="stylesheet">
+
+@extends('navbar')
+
 <div class="all">
     <div class="container-main-about">
         <div class="text-about">

@@ -1,3 +1,5 @@
+<link href="/css/main.css" rel="stylesheet">
+
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">RMBLR</a>
@@ -14,7 +16,7 @@
                 </li>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <button class="btn btn-outline-success" type="button">Search</button>
                 </form>
         </div>
     </div>
