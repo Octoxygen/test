@@ -1,0 +1,50 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: calc(23.875rem - 3.375rem * 2) ;
+    padding: 2.625rem 3.375rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.box-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.logo {
+    width: fit-content;
+
+    font-weight: 900;
+    font-size: 4rem;
+}
+
+input {
+    flex-grow: 1;
+}
+
+form {
+    width: 100%;
+}
+
+.box-input {
+    width: 100%;
+    height: 2.75rem;
+
+    margin-bottom: 1.5rem;
+
+    display: flex;
+}
+
+.box-buttons {    
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1rem;
+}

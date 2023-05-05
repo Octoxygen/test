@@ -1,7 +1,7 @@
 /* NAVBAR */
 /* Defaults */
 .navx p {
-    color: white;
+    color: var(--cpalette-30);
 }
 
 .username, .postcount, .btn-menudown, .logo {
@@ -33,7 +33,7 @@
 }
 
 .logo {
-    height: fit-content;
+    width: fit-content;
 
     font-weight: 900;
     font-size: 1.75em;
@@ -43,16 +43,15 @@
 .container-right {
     width: 14rem;
 
-    padding-right: 1em;
-
     display: flex;
     align-items: center;
-    gap: 1rem;
 }
 
 .container-user {
     width: 10px;
     flex-grow: 1;
+
+    margin-left: 1rem;
     /* padding: 0 0 0 1em; */
 }
 
@@ -67,8 +66,19 @@
 }
 
 .btn-menudown {
-    height: 9px;
-    width: 17px;
+    height: 100%;
+    width: 1.75rem;
+
+    /* padding-right: 1em; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-menudown {
+    height: 0.5625rem;
+    width: 1.0625rem;
 }
 
 .button {
@@ -86,10 +96,22 @@
 }
 
 .button:active {
-    color: var(--cpalette-10);
+    color: var(--cpalette-10-l);
 }
 
 .active {
     font-weight: 900;
-    color: var(--cpalette-10);
+    color: var(--cpalette-10-l);
+}
+
+.control {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+/* RESPONSIVENESS */
+
+.hidden {
+    display: none;
 }
