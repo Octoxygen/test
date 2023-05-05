@@ -1,4 +1,3 @@
-<link href="/css/main.css" rel="stylesheet">
 <link href="/css/nav.css" rel="stylesheet">
 
 <?php
