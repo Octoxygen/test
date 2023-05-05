@@ -11,7 +11,7 @@ body {
     font-family: 'Inter', sans-serif;
     margin: 0;
 
-    background: radial-gradient(70.33% 78.08% at 50% 6.64%, #0A1E17 0%, #030706 100%);
+    /* background: radial-gradient(70.33% 78.08% at 50% 6.64%, #0A1E17 0%, #030706 100%); */
 }
 
 p, h2, h1 {
