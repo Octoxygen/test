@@ -2,80 +2,61 @@
 @section('title', 'Register - RMBLR')
 @section('content')
 
-<link href="/css/main.css" rel="stylesheet">
-<div class="all">
-    <div class="row">
-        <div class="imgregistration col">
-            <img src="{{ asset("imgregistration.png") }}" alt="imgregistration">
+<link href="/css/registration.css" rel="stylesheet">
+
+<div class="content prelogin">
+    {{-- <div class="">
+        <img src="{{ asset("imgregistration.png") }}" alt="imgregistration">
+    </div> --}}
+
+    <div class="card">
+        <div class="box-logo">
+            <p>rmblrr</p>
+
         </div>
-        <div class="cardregistration col">
-            <form action="{{ url('register') }}" method="post" style="width: 750px; height: 450px">
-                <div class="row" >
-                    <div class="col center">
-                        <div class="mb-3">
-                            <div class="textlabel">
-                                <div class="loginlabel">
-                                {!! csrf_field() !!}
-                                    <label for="exampleInputEmail1" class="form-label">Username</label>
-                                </div>
-                                <div class="textlabelframe">
-                                    <input type="username" name="name" class="form-control, loginlabelbackground" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Input username">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <div class="textlabel">
-                                <div class="loginlabel">
-                                    <label for="exampleInputEmail1" class="form-label">Email</label>
-                                </div>
-                                <div class="textlabelframe">
-                                    <input type="email" name="email" class="form-control, loginlabelbackground" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Input email">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <div class="textlabel">
-                                <div class="loginlabel">
-                                    <label for="exampleInputEmail1" class="form-label">Password</label>
-                                </div>
-                                <div class="textlabelframe">
-                                    <input type="password" value="Save" name="password" class="form-control, loginlabelbackground" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Input password">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <div class="textlabel">
-                                <div class="loginlabel">
-                                    <label for="exampleInputEmail1" class="form-label">ConfirmPassword</label>
-                                </div>
-                                <div class="textlabelframe">
-                                    <input type="password" value="Save" name="password" class="form-control, loginlabelbackground" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Confirm Pasword">
-                                </div>
-                            </div>
+
+        <form action="{{ url('register') }}" method="post">
+            {!! csrf_field() !!}
+            <div class="box-details">
+                <div class="text">
+                    <div class="field">
+                        <label for="exampleInputEmail1" class="form-label">Username</label>
+                        <div class="box-input">
+                            <input class="short" type="text" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ex. ramblermaster">
                         </div>
                     </div>
-                    <div class="col">
-                        
-                            <div class="center">
-                                <img src="{{ asset('avatarsignup.jpg') }}" alt="avatarsignup" height="210px" width="210px" class="imgsignup">
-                            </div>
-                        
-                        <div class="row" style="height: 470">
-                            <div class="submit2 center">
-                                <button class="submitsignup" type="button">Upload Image</button>
-                                <button class="submit" type="button">Choose image</button>
-                            </div>
+                    <div class="field">
+                        <label for="exampleInputEmail1" class="">Email</label>
+                        <div class="box-input">
+                            <input class="short" type="text" name="email" class="" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ex. sherlock@rmblrr.com">
                         </div>
                     </div>
-                    <br><br>
-                    <div class="submit3">
-                        <button class="submit3" type="submit">Sign Up</button>
-                        
+                    <div class="field">
+                        <label for="exampleInputEmail1" class="">Password</label>
+                        <div class="box-input">
+                            <input class="short" type="password" name="password" class="" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ex. @superSeCrEt123">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="exampleInputEmail1" class="">Confirm Password</label>
+                        <div class="box-input">
+                            <input class="short" type="password" name="password" class="" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Retype your password">
+                        </div>
                     </div>
                 </div>
-            </form>
-        </div>
+    
+                <div class="">
+                    <img src="{{ asset('avatarsignup.jpg') }}" alt="avatarsignup" height="210px" width="210px" class="">
+                
+                    <div class="" style="height: 470">
+                        <button class="" type="button">Upload Image</button>
+                    </div>
+                    
+                </div>
+            </div>
+            <hr>
+            <button class="" type="submit">Sign Up</button>
+        </form>
     </div>
-</div>
 </div>
 @endsection

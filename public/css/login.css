@@ -24,6 +24,8 @@
 
     font-weight: 900;
     font-size: 4rem;
+
+    cursor: default;
 }
 
 input {
@@ -32,15 +34,6 @@ input {
 
 form {
     width: 100%;
-}
-
-.box-input {
-    width: 100%;
-    height: 2.75rem;
-
-    margin-bottom: 1.5rem;
-
-    display: flex;
 }
 
 .box-buttons {    
