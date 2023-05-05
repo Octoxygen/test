@@ -25,14 +25,14 @@
 
 <div class="navx">
     <div class="container-left">
-        <p class="logo" onclick="window.location='{{ url('account') }}'">rmblr</p>
-        <button class="button active" onclick="window.location='{{ url('home') }}'">POSTS</button>
-        <button class="button" onclick="window.location='{{ url('about') }}'">ABOUT</button>
+        <p class="logo" onclick="window.location='{{ url('home') }}'">rmblr</p>
+        <button class="button {{ str_contains(request()->url(), '/home')? 'active': '' }}" onclick="window.location='{{ url('home') }}'">POSTS</button>
+        <button class="button {{ str_contains(request()->url(), '/about')? 'active': '' }}" onclick="window.location='{{ url('about') }}'">ABOUT</button>
     </div>
     <div class="container-right">
         <img src="svg/icon-user.svg">
         <div class="container-user">
-            <p class="username" onclick="window.location='{{ url('account') }}'">{{ $username ?? 'adfdadfafadaaaaaaaaaaaaaaafaf' }}</p>
+            <p class="username" onclick="window.location='{{ url('account') }}'">{{ Session::get('user') ?? 'adfdadfafadaaaaaaaaaaaaaaafaf' }}</p>
             <p class="postcount" onclick="window.location='{{ url('account') }}'">{{ $posts ?? 'no posts yet' }}</p>
         </div>
         <img class="btn-menudown" src="svg/menu-down.svg" alt="" onclick="window.location='{{ url('account') }}'">

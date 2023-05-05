@@ -52,3 +52,7 @@ Route::get('/account', function(){
 Route::get('/about', function(){
     return view('about');
 });
+
+Route::get('/content', function() {
+    return view('content');
+});

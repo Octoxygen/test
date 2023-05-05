@@ -1,12 +1,96 @@
 :root {
     --cpalette-60: black;
     --cpalette-30: white;
-    /* --cpalette-10: #1DED92; */
     --cpalette-10: #58C69D;
     --inactive: gray;
+    --cp-10-dark: #0A1E17;
+    --cp-60-tinted: #030706;
 }
 
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
+
+    background: radial-gradient(70.33% 78.08% at 50% 6.64%, #0A1E17 0%, #030706 100%);
+}
+
+p, h2, h1 {
+    margin: 0;
+}
+
+b {
+    font-weight: 700;
+}
+
+h1 {
+    margin-bottom: 0.75rem;
+
+    font-size: 1.5rem;
+}
+
+input, button {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+}
+
+input {
+    padding-left: 0.75rem;
+}
+
+button {
+    font-weight: 700;
+    padding: 0.625rem;
+
+    background: var(--cpalette-60);
+    color: var(--cpalette-30);
+
+    border-style: none;
+    cursor: pointer;
+}
+
+button:hover, button.cta:hover {
+    background: var(--cp-10-dark);
+    color: var(--cpalette-30);
+}
+
+button:active, button.cta {
+    background: var(--cpalette-10);
+    color: var(--cpalette-60);
+}
+
+button.cta:active {
+    background: var(--cpalette-60);
+    color: var(--cpalette-30);
+}
+
+.content {
+    width: 100%;
+    min-height: calc(100vh - 4.5rem);
+
+    padding-top: 1.1875rem;
+}
+
+.main {
+    max-width: 41.8125rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.1875rem;
+}
+
+.side {
+    width: 16.375rem; 
+}
+
+.card {
+    border-radius: 10px;
+    background: var(--cpalette-30);
+    padding: 0.625rem 1.6875rem;
+}
+
+/* CONSTANTS */
+
+.user-icon {
+    height: 2.375rem;
+    width: 2.375rem;
 }

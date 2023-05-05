@@ -28,6 +28,8 @@ class LoginController extends Controller
             "SELECT COUNT(id) FROM users WHERE `name` = \"$request->name\" AND `password` = \"$request->password\""
         );
 
+        $request->session()->put('user', $request->name);
+
         if ($checkname == 1) {
             return redirect('home');
         } else {

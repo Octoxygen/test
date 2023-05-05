@@ -2,7 +2,6 @@
 /* Defaults */
 .navx p {
     color: white;
-    margin: 0;
 }
 
 .username, .postcount, .btn-menudown, .logo {
@@ -16,7 +15,7 @@
 }
 
 .navx {
-    height: 72px;
+    height: 4.5rem;
     width: 100%;
 
     display: flex;
@@ -78,9 +77,19 @@
 
     font-size: 1.125rem;
     color: var(--cpalette-30);
+    background: none;
+}
+
+.button:hover, .button:active {
+    background: none;
+    font-weight: 900;
+}
+
+.button:active {
+    color: var(--cpalette-10);
 }
 
 .active {
-    font-weight: 700;
+    font-weight: 900;
     color: var(--cpalette-10);
 }
