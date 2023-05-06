@@ -6,6 +6,7 @@ use Illuminate\Http\Client\Request;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PostController;
+use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,4 +61,8 @@ Route::get('/content/{id?}', function() {
 
 Route::get('/content', function() {
     return view('content');
+});
+
+Route::get('/linkstorage', function () {
+    Artisan::call('storage:link');
 });
