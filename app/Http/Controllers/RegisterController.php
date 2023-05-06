@@ -30,7 +30,7 @@ class RegisterController extends Controller
             'name' => $input['name'],
             'email' => $input['email'],
             'password' =>($input['password']),
-            'image' => $input['image'],
+            'image' => $request->hasFile('image')? $input['image'] : null,
         ]);
        return redirect('login')->with('flash_message', 'user added');
     }

@@ -7,7 +7,7 @@
 @extends('navbar')
 <div class="content">
     <div class="main">
-        <form action="create" method="post" enctype='multipart/form-data'>
+        <form action="post" method="post" enctype='multipart/form-data'>
             {{ csrf_field() }}
             <div class = "card details large">
                 <div class="box-input txtarea">

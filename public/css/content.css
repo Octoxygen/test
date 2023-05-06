@@ -3,7 +3,7 @@
     justify-content: center;
 }
 
-img {
+.content img {
     object-fit: unset;
 
     display: block;
