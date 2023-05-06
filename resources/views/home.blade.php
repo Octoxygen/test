@@ -18,7 +18,7 @@
 <div class="content">
     <div class="main">
         <div class="card post">
-                <img class="user-icon" src="{{ Session::get('userdata')->image ? asset('/storage/image/users/'.Session::get('userdata')->image) : asset('svg/icon-user.svg') }}">
+                <img class="user-icon" src="{{ Session::get('userdata')->image ? asset('storage/image/users/'.Session::get('userdata')->image) : asset('svg/icon-user.svg') }}">
                 <input type="text" placeholder="Write a post" onclick="window.location='{{ url('post') }}'">
         </div>
 
@@ -27,7 +27,7 @@
             <hr>
             <div class="featured">
                 @if ($featured->image)
-                    <img src="{{ asset('/storage/image/posts/'.$featured->image) }}">
+                    <img src="{{ asset('storage/image/posts/'.$featured->image) }}">
                 @endif
                 <div class="text">
                     <p class="title">{{ $featured->title }}</p>
@@ -57,7 +57,7 @@
                         </div>
                         
                         @if ($post->image)
-                            <img class="image" src="{{ asset('/storage/image/posts/'.$post->image) }}" alt="">
+                            <img class="image" src="{{ asset('storage/image/posts/'.$post->image) }}" alt="">
                         @endif
                     </div>
                     <p class="preview">{{ $post->text }}</p>

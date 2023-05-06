@@ -10,7 +10,7 @@
         <div class="card blog large">
             <p class="title">{{ $post->title }}</p>
             @if ($post->image)
-                <img src="{{ asset('/storage/image/posts/'.$post->image) }}">
+                <img src="{{ asset('storage/image/posts/'.$post->image) }}">
             @endif
             <p class="details">by <b>{{ $post->user_name }}</b> • {{ $post->created_at }}</p>
             <p class="text">{{ $post->text }}</p>
