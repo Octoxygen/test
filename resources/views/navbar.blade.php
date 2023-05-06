@@ -18,7 +18,7 @@
     </div>
 
     <div class="container-right">
-        <img src="{{ Session::get('userdata')->image ? asset('storage/image/users/'.Session::get('userdata')->image) : asset('svg/icon-user.svg') }}">
+        <img src="{{ Session::get('userdata')->image ? asset('public/storage/image/users/'.Session::get('userdata')->image) : asset('svg/icon-user.svg') }}">
         <img src="{{ Session::get('userdata')->image ? asset('storage/image/users/'.Session::get('userdata')->image) : asset('svg/icon-user.svg') }}">
         <img src="{{ Session::get('userdata')->image ? asset('storage/image/users/'.Session::get('userdata')->image) : asset('svg/icon-user.svg') }}">
         <div class="container-user">
