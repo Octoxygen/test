@@ -19,12 +19,7 @@
 
     <div class="container-right">
         <img src="{{ Session::get('userdata')->image ? asset('storage/image/users/'.Session::get('userdata')->image) : asset('svg/icon-user.svg') }}">
-        
-        <img src="{{ Session::get('userdata')->image ? asset('public/storage/image/users/'.Session::get('userdata')->image) : asset('svg/icon-user.svg') }}">
-        <img src="{{ Session::get('userdata')->image ? public_path('/image/users/'.Session::get('userdata')->image) : asset('svg/icon-user.svg') }}">
-        <img src="{{ Session::get('userdata')->image ? public_path('storage/image/users/'.Session::get('userdata')->image) : asset('svg/icon-user.svg') }}">
-        <img src="{{ Session::get('userdata')->image ? 'storage/image/users/'.Session::get('userdata')->image : asset('svg/icon-user.svg') }}">
-        <img src="{{ Session::get('userdata')->image ? asset('image/users/'.Session::get('userdata')->image) : asset('svg/icon-user.svg') }}">
+
         <div class="container-user">
             <p class="username" onclick="window.location='{{ url('account') }}'">{{ Session::get('user') ?? 'adfdadfafadaaaaaaaaaaaaaaafaf' }}</p>
             <p class="postcount" onclick="window.location='{{ url('account') }}'">{{ $postnum == 0? 'no posts yet' : $postnum . " posts" }}</p>
