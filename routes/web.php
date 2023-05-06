@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Client\Request;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,13 +40,9 @@ Route::get('/registration', function(){
     return view('registration');
 });
 
-Route::get('/create', function(){
-    return view('create');
-});
+Route::resource('/create', PostController::class);
 
-Route::get('/home', function(){
-    return view('home');
-});
+Route::get('/home', [HomeController::class, 'getPosts']);
 
 Route::get('/account', function(){
     return view('account');
@@ -52,6 +50,10 @@ Route::get('/account', function(){
 
 Route::get('/about', function(){
     return view('about');
+});
+
+Route::get('/content/{id?}', function() {
+    return view('content');
 });
 
 Route::get('/content', function() {

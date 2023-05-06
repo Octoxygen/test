@@ -14,6 +14,10 @@
     text-overflow: ellipsis;
 }
 
+img {
+    height: 2.375rem;
+}
+
 .navx {
     height: 4.5rem;
     width: 100%;

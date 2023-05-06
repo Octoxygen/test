@@ -1,0 +1,51 @@
+.content {
+    display: flex;
+    justify-content: center;
+    gap: 1.1875rem;
+}
+
+.main {
+    width: 100%;
+}
+
+.box-input {
+    margin-bottom: 0;
+}
+
+.box-input.txtarea {
+    height: auto;
+}
+
+input[type=text], textarea {
+    flex-grow: 1;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+}
+
+.details .text {
+    height: 18.75rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.625rem;
+}
+
+.side {
+    display: flex;
+    flex-direction: column;
+}
+
+.side .guidelines {
+    color: red;
+
+    height: 5.6875rem;
+
+    overflow: hidden;
+    white-space: normal;
+}

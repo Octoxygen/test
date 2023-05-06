@@ -27,8 +27,13 @@ class LoginController extends Controller {
             "SELECT COUNT(id) FROM users WHERE `name` = \"$request->name\" AND `password` = \"$request->password\""
         );
 
+        $userdata = DB::table('users')->where('name', $request->name)->first();
+
+        // $userdata = DB::table('users')->where('name', $request->name)->first();
+        // $id = DB::table('users')->where('name', $request->name)->value('id');
+
         $request->session()->put('user', $request->name);
-        // $request->session()->put('user', $request->name);
+        $request->session()->put('userdata', $userdata);
 
         if ($checkname == 1) {
             return redirect('home');

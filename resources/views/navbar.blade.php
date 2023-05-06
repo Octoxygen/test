@@ -18,7 +18,7 @@
     </div>
 
     <div class="container-right">
-        <img src="svg/icon-user.svg">
+        <img src="{{ Session::get('userdata')->image ? asset('/storage/image/users/'.Session::get('userdata')->image) : asset('svg/icon-user.svg') }}">
         <div class="container-user">
             <p class="username" onclick="window.location='{{ url('account') }}'">{{ Session::get('user') ?? 'adfdadfafadaaaaaaaaaaaaaaafaf' }}</p>
             <p class="postcount" onclick="window.location='{{ url('account') }}'">{{ $posts ?? 'no posts yet' }}</p>

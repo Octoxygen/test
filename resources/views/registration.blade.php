@@ -15,7 +15,7 @@
 
         </div>
 
-        <form action="{{ url('register') }}" method="post">
+        <form action="{{ url('register') }}" method="post" enctype="multipart/form-data">
             {!! csrf_field() !!}
             <div class="box-details">
                 <div class="text">
@@ -49,7 +49,7 @@
                     <img src="{{ asset('avatarsignup.jpg') }}" alt="avatarsignup" height="210px" width="210px" class="">
                 
                     <div class="" style="height: 470">
-                        <button class="" type="button">Upload Image</button>
+                        <input type="file" name="image">
                     </div>
                     
                 </div>

@@ -35,16 +35,26 @@ h1 {
     font-size: 1.5rem;
 }
 
+img {
+    object-fit: cover;
+}
+
 form {
     margin: 0;
 }
 
-input, button {
+input, button, textarea {
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
 }
 
-input[type=text], input[type=password] {
+textarea {
+    resize: none;
+    padding-top: 0.8125rem;
+    padding-bottom: 0.8125rem;
+}
+
+input[type=text], input[type=password], textarea {
     padding-left: 0.75rem;
 
     border: 2px solid var(--cp-10-dark);
@@ -52,11 +62,11 @@ input[type=text], input[type=password] {
     outline: none;
 }
 
-input[type=text]:hover, input[type=password]:hover {
+input[type=text]:hover, input[type=password]:hover, textarea:hover {
     border: 2px solid var(--cpalette-10-l);
 }
 
-input[type=text]:focus, input[type=password]:focus {
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
     border: 3px solid var(--cpalette-10-l);
 }
 
@@ -138,6 +148,10 @@ hr {
     border-radius: 10px;
     background: var(--cpalette-30);
     padding: 0.625rem 1.6875rem;
+}
+
+.large {
+    padding: 1.125rem 2rem;
 }
 
 .em.sm {
