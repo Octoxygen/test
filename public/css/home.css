@@ -89,6 +89,13 @@ input[type=text] {
     flex-grow: 1;
 }
 
+.blog:hover{
+    /* background: linear-gradient(180deg, #ffffff 0%, #d9eee6 52.6%, #ffffff 100%); */
+    background: var(--cpalette-10-d);
+
+    /* color: white; */
+}
+
 .blog button {
     height: 1.5625rem;
     padding: 0.25rem 0.625rem;

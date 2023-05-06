@@ -1,7 +1,7 @@
-<link href="/css/nav.css" rel="stylesheet">
+<link href="{{ asset('/css/nav.css') }}" rel="stylesheet">
 
 <?php
-    $isLogoutVisible = true;
+    $postnum = Session::get('post_num');
 ?>
 
 @if (empty(Session::get('user')))
@@ -21,10 +21,10 @@
         <img src="{{ Session::get('userdata')->image ? asset('/storage/image/users/'.Session::get('userdata')->image) : asset('svg/icon-user.svg') }}">
         <div class="container-user">
             <p class="username" onclick="window.location='{{ url('account') }}'">{{ Session::get('user') ?? 'adfdadfafadaaaaaaaaaaaaaaafaf' }}</p>
-            <p class="postcount" onclick="window.location='{{ url('account') }}'">{{ $posts ?? 'no posts yet' }}</p>
+            <p class="postcount" onclick="window.location='{{ url('account') }}'">{{ $postnum == 0? 'no posts yet' : $postnum . " posts" }}</p>
         </div>
         <div class="btn-menudown" onclick="toggleVisibility()">
-            <img class="icon-menudown" src="svg/menu-down.svg" alt="">
+            <img class="icon-menudown" src="{{ asset('svg/menu-down.svg') }}" alt="">
         </div>
     </div>
 
@@ -40,6 +40,7 @@
     var isLogoutVisible = false;
     function toggleVisibility() {
         var control = document.getElementById("control");
+        console.log({{$postnum}});
         console.log(isLogoutVisible);
         isLogoutVisible? control.classList.add('hidden') : control.classList.remove('hidden');
         isLogoutVisible = !isLogoutVisible;

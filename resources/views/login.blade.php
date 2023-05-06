@@ -2,7 +2,7 @@
 @section('title', 'Login - RMBLR')
 @section('content')
 
-<link href="/css/login.css" rel="stylesheet">
+<link href="{{ ('/css/login.css') }}" rel="stylesheet">
 
 <div class="content prelogin">
     <div class="card">

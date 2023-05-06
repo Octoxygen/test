@@ -1,0 +1,70 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 1.5rem;
+}
+
+.card.head {
+    width: fit-content;
+    padding: 0.75rem 3rem;
+    margin-top: 1.875rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+a {
+    color: var(--inactive);
+    font-weight: 900;
+}
+
+.box-devs {
+    max-width: 68.75rem;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+}
+
+.dev {
+    width: calc(20rem - 1.75rem);
+
+    display: flex;
+    flex-direction: column;
+    margin: 0.625rem;
+    
+    text-align: center;
+}
+
+.dev img {
+    object-fit: contain;
+
+    height: 15rem;
+}
+
+.name {
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    margin-top: 0.5rem;
+
+    color: var(--cpalette-10-l);
+    background: var(--cpalette-60);
+}
+
+.role {
+
+    font-size: 0.875rem;
+}
+
+.cont {
+    color: var(--cpalette-10-d);
+    font-weight: 700;
+
+    padding-top: 0.25rem;
+}

@@ -2,53 +2,57 @@
 @section('title', 'About - RMBLR')
 @section('content')
 
+<link rel="stylesheet" href="{{ asset('css/about.css') }}">
+
 @extends('navbar')
 
-<div class="all">
-    <div class="container-main-about">
-        <div class="text-about">
-            <h2>About the Developers</h2>
+<div class="content">
+    <div class="card head">
+        <p class="title"><a>&#60;devs&#62;</a> rmblrr <a>&#60;/devs&#62;</a></p>
+    </div>
+
+    <div class="box-devs">
+        <div class="card dev">
+            <img class="" src="tirso-dev.png">
+            <p class="name">Tirso Jon III O. <b>De Jesus</b></p>
+            <p class="role"><a>&#60; </a>Frontend Developer (Implementation)<a>&#62;</a></p>
+            <p class="cont">Contact Us</p>
         </div>
-        <div class="container-about">
-            <div class="card-dev">
-                <img class="picture-dev" src="tirso-dev.png">
-                <p>Tirso Jon III O. De Jesus</p>
-                <p>Front End Developer (Implementation)</p>
-                <p>Contact Us</p>
-            </div>
-            <div class="card-dev">
-                <img class="picture-dev" src="choy-dev.png">
-                <p>Migue Joshua M. Fernandez</p>
-                <p>Front End Developer (Implementation)</p>
-                <p>Contact Us</p>
-            </div>
-            <div class="card-dev">
-                <img class="picture-dev" src="joven-dev.png">
-                <p>Jonathan Joven H. Cruz</p>
-                <p>Front End Developer (Prototyping)</p>
-                <p>Contact Us</p>
-            </div>
+
+        <div class="card dev">
+            <img class="" src="choy-dev.png">
+            <p class="name">Miguel Joshua M. <b>Fernandez</b></p>
+            <p class="role"><a>&#60;</a>Frontend Developer (Implementation)<a>&#62;</a></p>
+            <p class="cont">Contact Us</p>
         </div>
-        <div class="container-about">
-            <div class="card-dev">
-                <img class="picture-dev" src="james-dev.png">
-                <p>James Patrick Pampam DeVera</p>
-                <p>Front End Developer (Prototyping)</p>
-                <p>Contact Us</p>
-            </div>
-            <div class="card-dev">
-                <img class="picture-dev" src="arice-dev.png">
-                <p>Arice Vincent M. Belda</p>
-                <p>Back End Developer</p>
-                <p>Contact Us</p>
-            </div>
-            <div class="card-dev">
-                <img class="picture-dev" src="anthony-dev.png">
-                <p>John Anthony DS. Lopez</p>
-                <p>Back End Developer</p>
-                <p>Contact Us</p>
-            </div>
+
+        <div class="card dev">
+            <img class="" src="joven-dev.png">
+            <p class="name">Jonathan Joven H. <b>Cruz</b></p>
+            <p class="role"><a>&#60;</a>Frontend Developer (Implementation)<a>&#62;</a></p>
+            <p class="cont">Contact Us</p>
         </div>
-    </div>  
+
+        <div class="card dev">
+            <img class="" src="james-dev.png">
+            <p class="name">James Patrick <b>de Vera</b></p>
+            <p class="role"><a>&#60;</a>Frontend Developer (Design)<a>&#62;</a></p>
+            <p class="cont">Contact Us</p>
+        </div>
+
+        <div class="card dev">
+            <img class="" src="arice-dev.png">
+            <p class="name">Arice Vincent M. <b>Belda</b></p>
+            <p class="role"><a>&#60;</a>Backend Developer<a>&#62;</a></p>
+            <p class="cont">Contact Us</p>
+        </div>
+
+        <div class="card dev">
+            <img class="" src="anthony-dev.png">
+            <p class="name">John Anthony DS. <b>Lopez</b></p>
+            <p class="role"><a>&#60;</a>Backend Developer<a>&#62;</a></p>
+            <p class="cont">Contact Us</p>
+        </div>
+    </div>
 </div>
 @endsection

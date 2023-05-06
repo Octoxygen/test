@@ -46,5 +46,19 @@ class PostController extends Controller
         return redirect('home')->with('flash_message', 'Student Added');
     }
 
-    
+    /** 
+     * Display the specified resource.
+     */
+    public function show(string $id): View {
+        if ($id != "random") {
+            $post = DB::table('posts')->where('post_id', $id)->first();
+        } else {
+            $post = Posts::inRandomOrder()->first();
+        }
+        return view('content')->with('post', $post);
+    }
+
+    public function random() {
+        return redirect('/post/random');
+    }
 }

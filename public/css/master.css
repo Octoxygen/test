@@ -25,6 +25,10 @@ p, h2, h1 {
     color: var(--cpalette-60);
 }
 
+a {
+    all: unset;
+}
+
 b {
     font-weight: 700;
 }

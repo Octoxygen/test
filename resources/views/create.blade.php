@@ -2,7 +2,7 @@
 @section('title', 'Create - RMBLR')
 @section('content')
 
-<link href="/css/create.css" rel="stylesheet">
+<link href="{{ asset('/css/create.css') }}" rel="stylesheet">
 
 @extends('navbar')
 <div class="content">

@@ -7,7 +7,7 @@
     $featured = Session::get('featured');
 ?>
 
-<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="{{ asset('css/home.css')}}">
 
 <script type="text/javascript">
     console.log("{{ Session::get('user_id') }}");
@@ -19,7 +19,7 @@
     <div class="main">
         <div class="card post">
                 <img class="user-icon" src="{{ Session::get('userdata')->image ? asset('/storage/image/users/'.Session::get('userdata')->image) : asset('svg/icon-user.svg') }}">
-                <input type="text" placeholder="Write a post" onclick="window.location='{{ url('create') }}'">
+                <input type="text" placeholder="Write a post" onclick="window.location='{{ url('post') }}'">
         </div>
 
         <div class="card large">
@@ -33,9 +33,8 @@
                     <p class="title">{{ $featured->title }}</p>
                     <p class="details">by <b>{{ $featured->user_name }}</b> • {{ $featured->created_at }}</p>
                     <p class="preview">{{ $featured->text }}</p>
-                    <form action="{{ url('/content'.'/'.$featured->post_id) }}" method="get">
-                        <button type="submit">Continue Reading</button>
-                    </form>
+
+                    <a href="{{ url('/post/'.$featured->post_id) }}"><button type="submit">Continue Reading</button></a>
                 </div>
             </div>
         </div>
@@ -44,15 +43,16 @@
             <h1>Posts</h1>
             <hr>
             @foreach (Session::get('posts') as $post)
+            <a href="{{ url('/post/'.$post->post_id) }}">
                 <div class="blog">
                     <div class="box-header">
                         <div class="box-info">
                             <p class="title">{{ $post->title }}</p>
                             <p class="details">by <b>{{ $post->user_name }}</b> • {{ $post->created_at}}</p>
                             <div class="box-tags">
-                                <button class="tag" type="button">Tags</button>
-                                <button class="tag" type="button">Tags</button>
-                                <button class="tag" type="button">Tags</button>
+                                @foreach (explode(',', $post->tags) as $tag)
+                                    <button class="tag" type="button">{{ $tag }}</button>
+                                @endforeach
                             </div>
                         </div>
                         
@@ -62,8 +62,9 @@
                     </div>
                     <p class="preview">{{ $post->text }}</p>
                 </div>
+                <hr>
+            </a>    
             @endforeach
-            <hr>
         </div>
     </div>
 
@@ -71,8 +72,8 @@
         <div class="card call_to_action">
             <p><b class="em sm">Welcome to rmblr!</b></p>
             <p class="nm sm">Share and find blogs that pique your interests</p>
-            <button class="cta" onclick="window.location='{{ url('create') }}'">Write Post</button>
-            <button onclick="window.location='{{ url('content') }}'">Take Me Somewhere</button>
+            <button class="cta" onclick="window.location='{{ url('post') }}'">Write Post</button>
+            <button onclick="window.location='{{ url('random') }}'">Take Me Somewhere</button>
         </div>
     </div>
 </div>

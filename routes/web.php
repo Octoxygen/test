@@ -40,7 +40,9 @@ Route::get('/registration', function(){
     return view('registration');
 });
 
-Route::resource('/create', PostController::class);
+Route::resource('/post', PostController::class);
+
+Route::get('/random', [PostController::class, 'random']);
 
 Route::get('/home', [HomeController::class, 'getPosts']);
 
