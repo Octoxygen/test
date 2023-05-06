@@ -61,3 +61,8 @@ Route::get('/content/{id?}', function() {
 Route::get('/content', function() {
     return view('content');
 });
+
+Route::get('/create-symlink', function (){
+    symlink(storage_path('/app/public'), public_path('storage'));
+    echo "Symlink Created. Thanks";
+});
