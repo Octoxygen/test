@@ -18,14 +18,10 @@ use Illuminate\Support\Facades\Artisan;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-// Route::get('/', [RegisterController::class, 'create']);
-// Route::post('/register', [RegisterController::class, 'store'])->name('register');
 
 Route::get('/login', [LoginController::class, 'index']);
 Route::post('/check', [LoginController::class, 'check']);
 Route::post('/logout', [LoginController::class, 'logout']);
-
-// Route::resource("/login", LoginController::class);
 
 Route::resource("/register", RegisterController::class);
 
@@ -33,16 +29,11 @@ Route::get('/', function () {
     return view('login');
 });
 
-// Route::get('/login', function(){
-//     return view('login');
-// });
-
 Route::get('/registration', function(){
     return view('registration');
 });
 
 Route::resource('/post', PostController::class);
-
 Route::get('/random', [PostController::class, 'random']);
 
 Route::get('/home', [HomeController::class, 'getPosts']);
@@ -61,8 +52,4 @@ Route::get('/content/{id?}', function() {
 
 Route::get('/content', function() {
     return view('content');
-});
-
-Route::get('/linkstorage', function () {
-    Artisan::call('storage:link');
 });
