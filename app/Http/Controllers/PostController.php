@@ -58,7 +58,19 @@ class PostController extends Controller
         return view('content')->with('post', $post);
     }
 
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id) {
+        Posts::destroy($id);
+        return redirect('/home')->with('flash_message', 'Student Deleted!');
+    }
+
     public function random() {
         return redirect('/post/random');
+    }
+
+    public function posts() {
+        return view('posts');
     }
 }

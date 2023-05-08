@@ -24,6 +24,7 @@ Route::post('/check', [LoginController::class, 'check']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::resource("/register", RegisterController::class);
+Route::post("/account/{name}", [RegisterController::class, 'update']);
 
 Route::get('/', function () {
     return view('login');
@@ -35,6 +36,7 @@ Route::get('/registration', function(){
 
 Route::resource('/post', PostController::class);
 Route::get('/random', [PostController::class, 'random']);
+Route::get('/user/posts', [PostController::class, 'posts']);
 
 Route::get('/home', [HomeController::class, 'getPosts']);
 

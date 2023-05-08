@@ -42,10 +42,18 @@ input[type=text], textarea {
 }
 
 .side .guidelines {
-    color: red;
-
     height: 5.6875rem;
+    /* height: fit-content; */
 
     overflow: hidden;
     white-space: normal;
+}
+
+#controlx, #controlx:hover, #controlx:focus {
+    width: 100%;
+    height: fit-content;
+
+    scroll-behavior: smooth;
+
+    border: none;
 }

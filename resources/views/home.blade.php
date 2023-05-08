@@ -18,8 +18,8 @@
 <div class="content">
     <div class="main">
         <div class="card post">
-                <img class="user-icon" src="{{ Session::get('userdata')->image ? asset('storage/image/users/'.Session::get('userdata')->image) : asset('svg/icon-user.svg') }}">
-                <input type="text" placeholder="Write a post" onclick="window.location='{{ url('post') }}'">
+            <img class="user-icon" src="{{ Session::get('userdata')->image ? asset('storage/image/users/'.Session::get('userdata')->image) : asset('svg/icon-user.svg') }}">
+            <input type="text" placeholder="Write a post" onclick="window.location='{{ url('post') }}'">
         </div>
 
         <div class="card large">
@@ -27,7 +27,7 @@
             <hr>
             <div class="featured">
                 @if ($featured->image)
-                    <img src="{{ asset('storage/image/posts/'.$featured->image) }}">
+                <img src="{{ asset('storage/image/posts/'.$featured->image) }}">
                 @endif
                 <div class="text">
                     <p class="title">{{ $featured->title }}</p>
@@ -51,7 +51,7 @@
                             <p class="details">by <b>{{ $post->user_name }}</b> • {{ $post->created_at}}</p>
                             <div class="box-tags">
                                 @foreach (explode(',', $post->tags) as $tag)
-                                    <button class="tag" type="button">{{ $tag }}</button>
+                                <button class="tag" type="button">{{ $tag }}</button>
                                 @endforeach
                             </div>
                         </div>

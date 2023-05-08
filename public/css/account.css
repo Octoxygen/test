@@ -1,0 +1,32 @@
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    width: 37.1875rem;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+}
+
+.box-settings {
+    display: flex;
+}
+
+.fine {
+    font-size: 0.75rem;
+}
+
+p {
+    width: 15.625rem;
+}
+
+input[type=text], input[type=password] {
+    flex-grow: 1;
+}
+
+form {
+    width: fit-content;
+}

@@ -10,7 +10,7 @@ class HomeController extends Controller
     public function getPosts(Request $request) {
         $posts = DB::table('posts')->orderBy('created_at', 'desc')->get();
         $user = DB::table('users')->where('name', $request->session()->get('user'))->first();
-        $featured = DB::table('posts')->where('post_id', 10)->first();
+        $featured = DB::table('posts')->where('post_id', 11)->first();
 
         $postnum = DB::scalar(
             "SELECT COUNT(post_id) FROM posts WHERE user_name = '$user->name'"
